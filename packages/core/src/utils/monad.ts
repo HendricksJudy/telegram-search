@@ -36,7 +36,7 @@ export function Ok<T>(value: T): Result<T> {
 }
 
 export function Err<T>(error: unknown): Result<T> {
-  useLogger('core:monnad').withError(error).warn('An error occurred')
+  useLogger('core:monad').withError(error).warn('An error occurred')
 
   return {
     orDefault: (defaultValue: T) => defaultValue,
